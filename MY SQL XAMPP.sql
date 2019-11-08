@@ -7,7 +7,7 @@ CREATE TABLE `Departments` (
 `Production` char(30) NOT NULL,
 CONSTRAINT PK_DepartmrntID	PRIMARY KEY (`DepartmentID`))
 
-CREATE TABLE `Locatioins` ( 
+CREATE TABLE `Locations` ( 
 `LocationtID` char(35) NOT NULL, 
 `Production` char(30) NOT NULL, 
 `Warehousing` char(15) NOT NULL, 
@@ -46,7 +46,7 @@ CREATE TABLE `Employees` (
  PRIMARY KEY (`ProjectID`,`EmployeeID`)
     CONSTRAINT FK_EmployeeID FOREIGN KEY (EmployeeID)
 
-   CREATE TABLE TREASURY (
+   CREATE TABLE 'TREASURY' (
    'DepartmentID' Char(35) NOT NULL,
    'Profit' Numeric(8,2) NOT NULL,
    'EmployeeID' Int(5) NOT NULL,
