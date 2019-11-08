@@ -33,4 +33,13 @@ CREATE TABLE `Employees` (
  `LastName` char(25) NOT NULL,
  `HireDate` date NOT NULL,
  `Sales` int(11) NOT NULL,
- PRIMARY KEY (`EmployeeID`)                                    
+ PRIMARY KEY (`EmployeeID`)    
+  
+
+  CREATE TABLE `projects` (
+ `ProjectID` int(11) NOT NULL,
+ `StartDate` date NOT NULL,
+ `CompletionDate` date NOT NULL,
+ `EmployeeID` int(11) NOT NULL,
+ `CustomerID` int(11) NOT NULL,
+ PRIMARY KEY (`ProjectID`,`EmployeeID`)
