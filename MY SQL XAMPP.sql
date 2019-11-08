@@ -24,3 +24,13 @@ CREATE TABLE `Products` (
 `TireType` char(12) NOT NULL, 
 `Profit` char(15) NOT NULL, 
 CONSTRAINT FK_Profit	 FOREIGN KEY (`Profit`)) REFERENCES Treasury(Salary)
+                                   
+CREATE TABLE `Employees` (
+ `EmployeeID` int(5) NOT NULL,
+ `Email` varchar(100) NOT NULL,
+ `Phone` char(12) DEFAULT NULL,
+ `FirstName` char(25) NOT NULL,
+ `LastName` char(25) NOT NULL,
+ `HireDate` date NOT NULL,
+ `Sales` int(11) NOT NULL,
+ PRIMARY KEY (`EmployeeID`)                                    
