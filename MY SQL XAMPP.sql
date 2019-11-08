@@ -45,3 +45,13 @@ CREATE TABLE `Employees` (
  `CustomerID` int(11) NOT NULL,
  PRIMARY KEY (`ProjectID`,`EmployeeID`)
     CONSTRAINT FK_EmployeeID FOREIGN KEY (EmployeeID)
+
+   CREATE TABLE TREASURY (
+   'DepartmentID' Char(35) NOT NULL,
+   'Profit' Numeric(8,2) NOT NULL,
+   'EmployeeID' Int(5) NOT NULL,
+   'Salary' Numeric(8,2) NULL,
+   'Sales' Numeric(8,2) NULL,
+    CONSTRAINT          DepartmentPK    PRIMARY KEY(DepartmentID)
+    CONSTRAINT          EmployeeIDFK    FOREIGN KEY(EmployeeID)
+    CONSTRAINT          ProfitCheck     CHECK (Profit < Sales))
