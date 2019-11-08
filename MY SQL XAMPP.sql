@@ -34,6 +34,7 @@ CREATE TABLE `Employees` (
  `HireDate` date NOT NULL,
  `Sales` int(11) NOT NULL,
  PRIMARY KEY (`EmployeeID`)    
+  CONSTRAINT FK_SALES   FOREIGN KEY (Sales)
   
 
   CREATE TABLE `projects` (
@@ -43,3 +44,4 @@ CREATE TABLE `Employees` (
  `EmployeeID` int(11) NOT NULL,
  `CustomerID` int(11) NOT NULL,
  PRIMARY KEY (`ProjectID`,`EmployeeID`)
+    CONSTRAINT FK_EmployeeID FOREIGN KEY (EmployeeID)
