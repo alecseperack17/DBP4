@@ -63,3 +63,9 @@ CREATE TABLE `Employees` (
    'PurchaseDate' Datetime NULL,
     CONSTRAINT ProductIDFK FOREIGN KEY(ProductID)
     CONSTRAINT CustomerIDPK PRIMARY KEY(CustomerID))
+                                        
+    Create Table Benefits
+     EmployeeId int(5) NOT NULL,
+     VacationTime char(5) NOT NULL,
+     Sickdays Char(5)    NOTNULL,
+     SALARY   INT(5) NOT NULL)                                   
