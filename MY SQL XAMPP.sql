@@ -52,6 +52,14 @@ CREATE TABLE `Employees` (
    'EmployeeID' Int(5) NOT NULL,
    'Salary' Numeric(8,2) NULL,
    'Sales' Numeric(8,2) NULL,
-    CONSTRAINT          DepartmentPK    PRIMARY KEY(DepartmentID)
-    CONSTRAINT          EmployeeIDFK    FOREIGN KEY(EmployeeID)
-    CONSTRAINT          ProfitCheck     CHECK (Profit < Sales))
+    CONSTRAINT DepartmentPK PRIMARY KEY(DepartmentID)
+    CONSTRAINT EmployeeIDFK FOREIGN KEY(EmployeeID)
+    CONSTRAINT ProfitCheck CHECK (Profit < Sales))
+
+   CREATE TABLE 'CUSTOMERS' (
+   'CustomerID' Int(5) NOT NULL,
+   'ProductID' Int(35) NOT NULL,
+   'Reviews' Char(12) NOT NULL,
+   'PurchaseDate' Datetime NULL,
+    CONSTRAINT ProductIDFK FOREIGN KEY(ProductID)
+    CONSTRAINT CustomerIDPK PRIMARY KEY(CustomerID))
